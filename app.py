@@ -57,7 +57,7 @@ def upload():
     # Change the backend of Matplotlib to generate the plots in the main thread
     plt.switch_backend('agg')
 
-    # Generate a bar chart of the most used words
+    # generamos histograma o grafico de barras con las frecuencias de cada palabra
     plt.figure(figsize=(8, 6))
     plt.bar(range(len(top_words)), [count for _, count in top_words], align='center')
     plt.xticks(range(len(top_words)), [word for word, _ in top_words], rotation='vertical')
@@ -68,7 +68,7 @@ def upload():
     plt.savefig('static/word_chart.png')
     plt.close()
 
-    # Generate a scatter plot of word frequencies
+    # generamos un grafico de dispersion de las word frequencies
     plt.figure(figsize=(8, 6))
     plt.scatter(range(len(top_words)), [count for _, count in top_words])
     plt.xlabel('Word')
@@ -79,7 +79,7 @@ def upload():
     plt.savefig('static/scatter_plot.png')
     plt.close()
 
-    # Generate a pie chart of the most used words
+    # generamos un grafico de torta de las palabras más usadas
     plt.figure(figsize=(8, 6))
     labels = [word for word, _ in top_words]
     sizes = [count for _, count in top_words]
@@ -90,7 +90,7 @@ def upload():
     plt.savefig('static/pie_chart.png')
     plt.close()
 
-    # Generate a radar chart of the most used words
+    # generamos una gráfica de radar de las palabras más usadas
     categories = [word for word, _ in top_words]
     frequencies = [count for _, count in top_words]
     angles = np.linspace(0, 2 * np.pi, len(categories), endpoint=False).tolist()
