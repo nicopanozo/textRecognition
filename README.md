@@ -1,4 +1,4 @@
-# textRecognition
+# textRecognition - Nicolas Panozo
 ## packages used for this project
 ### pip install flask
 ### pip install pytesseract
