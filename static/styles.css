@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Belanosima', sans-serif;
+}
+
+body {
+  background-color: #5390a8;
+  color: #b3d8e8;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+h2 {
+  color: white;
+  font-size: 1.8rem;
+  margin-top: 20px;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  color: #b3d8e8;
+  font-size: 3em;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #2f58cd;
+  padding: 0 10px;
+  font-family: 'Belanosima', sans-serif;
+  font-weight: 600;
+  border-radius: 3px;
+}
+
+header .navbar {
+  position: relative;
+  display: flex;
+}
+
+header .navbar li {
+  list-style: none;
+  margin-left: 30px;
+}
+
+header .navbar li a {
+  text-decoration: none;
+  color: #b3d8e8;
+  font-weight: 600;
+  padding: 10px;
+  transition: 0.3s;
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+
+header .navbar li a:hover {
+  color: white;
+}
+
+/* Contenido */
+.contenido {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.contenido .tituloBox {
+  position: relative;
+  max-width: 600px;
+}
+
+.contenido .tituloBox h2 {
+  font-size: 7em;
+  font-family: 'Lora', serif;
+  text-transform: uppercase;
+  color: #0c2364;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.contenido .tituloBox h2 span {
+  background: #2f58cd;
+  color: #b3d8e8;
+  padding: 0 10px;
+  font-family: 'Lora', serif;
+  font-weight: 600;
+}
+
+.contenido .tituloBox p {
+  background: #2f58cd;
+  color: #b3d8e8;
+  line-height: 1.2;
+  font-size: 2em;
+  font-family: 'Belanosima', sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  margin-right: 270px;
+}
+
+.contenido .imgBox .upload-form {
+  width: 480px;
+  justify-content: center;
+}
+
+.contenido .imgBox .upload-form .image-upload {
+  height: 5vh;
+}
+
+h1,
+p {
+  margin: 1em auto;
+  text-align: center;
+}
+
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+input[type='submit'] {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #2f58cd;
+  border: none;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type='submit']:hover {
+  background-color: #b3d8e8;
+}
+
+input[type='file'] {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  padding: 0.5em 1em;
+  border: none;
+  background-color: #2e8a99;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type='file']:hover {
+  background-color: #1d6f7a;
+}
+
+/* Resultados */
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header .logo {
+  background: #0c2364;
+}
+
+header .navbar li a {
+  color: #b3d8e8;
+}
+
+.contenido {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contenido .tituloBox h2 {
+  font-size: 4em;
+}
+
+.contenido .tituloBox p {
+  margin-right: 0;
+}
+
+.contenido .imgBox .upload-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.result-info {
+  margin-bottom: 20px;
+  border: 5px solid #b3d8e8;
+  padding: 10px;
+  text-align: center;
+}
+
+.result-info p {
+  color: white;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.result-text {
+  background-color: #2f58cd;
+  color: white;
+  padding: 10px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.result-text p {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.chart-container2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.chart-box {
+  text-align: center;
+}
+
+.chart-box img {
+  width: 100%;
+  max-width: 600px;
+}
+
+.chart-box p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+/* Estilos para translate.html */
+
+h1 {
+  color: #0c2364;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+
+p {
+  margin-bottom: 10px;
+}
+
+pre {
+  background-color: #2f58cd;
+  padding: 10px;
+  margin-bottom: 20px;
+  white-space: pre-wrap;
+  text-align: center;
+}
+
+.texto-reconocido {
+  color: white;
+  font-size: 1.9rem;
+  margin-top: 20px;
+}
+
+pre strong {
+  color: white;
+}
+
+.header1 {
+  margin-bottom: 50px;
+}

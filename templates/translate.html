@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="descripcion proyecto" />
+    <title>Traducción del Texto Reconocido</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+    <section>
+    <header class="header1">
+        <a href="/" class="logo">n-panozo</a>
+        <ul class="navbar">
+            <li><a href="/">Acerca de</a></li>
+            <li><a href="/">Contacto</a></li>
+        </ul>
+    </header>
+    <div class="contenido-traduccion">
+    <h1>Traducción del Texto Reconocido</h1>
+    {% if error_message %}
+        <h2>Error:</h2>
+        <p>{{ error_message }}</p>
+    {% else %}
+        <p><strong>Texto original:</strong></p>
+        <pre>{{ text }}</pre>
+        {% if translation_es %}
+            <p><strong>Traducción al inglés:</strong></p>
+            <pre>{{ translation_es }}</pre>
+        {% endif %}
+        {% if translation_en %}
+            <p><strong>Traducción al español:</strong></p>
+            <pre>{{ translation_en }}</pre>
+        {% endif %}
+    {% endif %}
+    </div>
+</section>
+</body>
+</html>

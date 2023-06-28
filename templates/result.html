@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="descripcion proyecto" />
+    <title>Resultados del Reconocimiento de Texto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+  <section class="section-result">
+    <header>
+        <a href="/" class="logo">n-panozo</a>
+        <ul class="navbar">
+            <li><a href="/">Acerca de</a></li>
+            <li><a href="/">Contacto</a></li>
+        </ul>
+    </header>
+  
+    <div class="content">
+        <h1>Resultados del Reconocimiento de Texto</h1>
+        <div class="result-info">
+            <p><strong>Cantidad de líneas de texto:</strong> {{ lines_count }}</p>
+            <p><strong>Cantidad de palabras:</strong> {{ words|length }}</p>
+        </div>
+        <div class="result-text">
+            <p class="texto-reconocido"><strong>Texto reconocido:</strong></p>
+            <pre>{{ text }}</pre>
+        </div>
+        <div class="chart-container">
+            <div class="chart-box">
+                <img src="{{ url_for('static', filename='pie_chart.png') }}" alt="Gráfico de pastel de palabras más utilizadas">
+                <p>Gráfico de pastel de palabras más utilizadas</p>
+            </div>
+            <div class="chart-box">
+                <img src="{{ url_for('static', filename='radar_chart.png') }}" alt="Gráfico de radar de palabras más utilizadas">
+                <p>Gráfico de radar de palabras más utilizadas</p>
+            </div>
+        </div>
+
+        <div class="chart-container2">
+            <div class="chart-box">
+                <img src="{{ url_for('static', filename='word_chart.png') }}" alt="Gráfico de palabras más utilizadas">
+                <p>Gráfico de palabras más utilizadas</p>
+            </div>
+            <div class="chart-box">
+                <img src="{{ url_for('static', filename='scatter_plot.png') }}" alt="Diagrama de dispersión de frecuencia de palabras">
+                <p>Diagrama de dispersión de frecuencia de palabras</p>
+            </div>
+          </div>
+
+        <form action="/translate" method="post">
+            <input type="hidden" name="text" value="{{ text }}">
+            <input type="submit" value="Traducir" class="translate-button">
+        </form>
+    </div>
+  </section>
+</body>
+</html>
